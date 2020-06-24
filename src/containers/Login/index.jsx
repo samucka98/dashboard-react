@@ -22,7 +22,7 @@ const Login = () => {
       }).then(response => {
         setAuth(response.data);
         history.push('/dashboard');
-      })
+      });
 
       console.log();
     } catch (error) {
