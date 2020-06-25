@@ -62,18 +62,19 @@
   display: flex;
   justify-content: space-between;
   width: 680px;
+  margin-bottom: 20px;
 }
 
-.cadUser__element {
+.cadUser__group {
   display: flex;
   flex-direction: column;
 }
 
-.cadUser__element label {
+.cadUser__group label {
   margin: 12px 0px;
 }
 
-.cadUser__element input {
+.cadUser__group input {
   outline: none;
   border: none;
   background: none;
@@ -85,7 +86,7 @@
   color: #eee;
 }
 
-.cadUser__element input:focus {
+.cadUser__group input:focus {
   border: 2px solid darkcyan;
 }
 
@@ -94,4 +95,35 @@
   font-weight: bold;
   font-size: 18px;
   margin-left: 4px;
+}
+
+.cadUSer__formActions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.cadUSer__formActions button {
+  outline: none;
+  background: none;
+  border: none;
+  background-color: darkcyan;
+  color: #eee;
+  font-size: 18px;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.cadUSer__upload {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.cadUSer__upload label {
+  margin-bottom: 20px;
+  color: #ddd;
 }

@@ -22,8 +22,18 @@ const CadUser = () => {
         </div>
 
         <div className="cadUser__formData">
+
+        <div className="cadUSer__upload">
+            <label htmlFor="avatar">Sua foto</label>
+            <input 
+              type="file" 
+              name="avatar" 
+              id="avatar"
+            />
+          </div>
+
           <div className="cadUser__formInput-2">
-            <div className="cadUser__element">
+            <div className="cadUser__group">
               <label htmlFor="fname">
                 Primeiro Nome <span className="req" >*</span>
               </label>
@@ -32,12 +42,11 @@ const CadUser = () => {
                 type="text"
                 name="fname" 
                 id="fname"
-                autoComplete="off" 
                 placeholder="Seu Primeiro Nome"
               />
             </div>
 
-            <div className="cadUser__element">
+            <div className="cadUser__group">
               <label htmlFor="lname">
                 Último Nome <span className="req" >*</span>
               </label>
@@ -46,10 +55,42 @@ const CadUser = () => {
                 type="text"
                 name="lname" 
                 id="lname"
-                autoComplete="off" 
                 placeholder="Seu Último Nome"
               />
             </div>
+          </div>
+
+
+          <div className="cadUser__formInput-2">
+            <div className="cadUser__group">
+              <label htmlFor="email">
+                Email <span className="req" >*</span>
+              </label>
+              
+              <input
+                type="email"
+                name="email" 
+                id="email"
+                placeholder="Seu melhor email"
+              />
+            </div>
+
+            <div className="cadUser__group">
+              <label htmlFor="pass">
+                Senha <span className="req" >*</span>
+              </label>
+              
+              <input
+                type="password"
+                name="pass" 
+                id="pass"
+                placeholder="Sua Senha"
+              />
+            </div>
+          </div>
+
+          <div className="cadUSer__formActions">
+            <button>Cadastrar</button>
           </div>
         </div>
       </div>
