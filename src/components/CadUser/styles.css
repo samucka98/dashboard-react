@@ -1,7 +1,97 @@
 .cadUser {
-  width: 94%;
-  height: 600px;
-  background-color: #fafafa;
+  width: 96%;
+  height: 680px;
+  background-color: #22222288;
+  backdrop-filter: saturate(180%) blur(15px);
   border-radius: 10px;
+  border: 1px solid #333;
+  overflow: auto;
+  display: flex;
 }
 
+.cadUser__info {
+  border-radius: 10px 0px 0px 10px;
+  width: 380px;
+  height: 680px;
+  border-right: 2px solid #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #22222244;
+}
+
+.cadUser__info h1 {
+  margin: 0;
+  color: darkcyan;
+  font-weight: 200;
+  font-size: 32px;
+  text-shadow: 1px 1px #222;
+}
+
+.cadUser__info p {
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: justify;
+  color: #fff;
+  font-weight: 200;
+  font-size: 16px;
+  text-shadow: 1px 1px #222;
+}
+
+.cadUser__form {
+  margin-left: 30px;
+}
+
+.cadUser__formTitle h1 {
+  margin: 0;
+  margin-top: 30px;
+  color: darkcyan;
+  font-weight: 200;
+  font-size: 32px;
+  text-shadow: 1px 1px #333;
+}
+
+.cadUser__formData {
+  margin-top: 40px;
+}
+
+.cadUser__formInput-2 {
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  width: 680px;
+}
+
+.cadUser__element {
+  display: flex;
+  flex-direction: column;
+}
+
+.cadUser__element label {
+  margin: 12px 0px;
+}
+
+.cadUser__element input {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 16px;
+  border: 2px solid #555;
+  padding: 12px 8px;
+  width: 300px;
+  border-radius: 8px;
+  color: #eee;
+}
+
+.cadUser__element input:focus {
+  border: 2px solid darkcyan;
+}
+
+.req {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 4px;
+}
