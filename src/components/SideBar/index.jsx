@@ -4,7 +4,7 @@ import './styles.css';
 const SideBar = () => {
   return(
     <div className="sideBar">
-      SideBar
+      
     </div>
   );
 }

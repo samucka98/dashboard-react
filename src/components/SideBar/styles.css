@@ -1,0 +1,8 @@
+.sideBar {
+  width: 93%;
+  height: 97vh;
+  backdrop-filter: saturate(180%) blur(3px);
+  border: 1px solid #111;
+  border-radius: 6px;
+  overflow: auto;
+}
