@@ -21,7 +21,7 @@ const Login = () => {
         password: pass
       }).then(response => {
         setAuth(response.data);
-        history.push('/dashboard');
+        history.push('/dashboard/cad');
       });
 
       console.log();

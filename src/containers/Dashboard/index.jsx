@@ -5,6 +5,7 @@ import './styles.css';
 import SideBar from '../../components/SideBar';
 import NavBar from '../../components/NavBar';
 import CadUser from '../../components/CadUser';
+import ListUser from '../../components/ListUser';
 
 const Dashboard = () => {
 
@@ -25,6 +26,7 @@ const Dashboard = () => {
           <BrowserRouter>
             <Switch>
               <Route exact path={`${match.path}/cad`} render={CadUser} />
+              <Route exact path={`${match.path}/list`} render={ListUser} />
             </Switch>
           </BrowserRouter>
         </div>
