@@ -1,10 +1,9 @@
-import React from 'react';
-import './styles.css';
-import api from '../../services/api';
-import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import sectionAction from '../../Actions/sectionAction';
+import api from '../../services/api';
+import './styles.css';
 
 const Login = () => {
   const history = useHistory();
