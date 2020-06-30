@@ -1,5 +1,5 @@
 .listUser {
-  width: 98%;
+  width: 1130px;
   height: 680px;
   background-color: #22222288;
   backdrop-filter: saturate(180%) blur(15px);
@@ -7,6 +7,7 @@
   border: 1px solid #333;
   overflow: auto;
   display: flex;
+  flex-direction: column;
 }
 
 .listUser__title {
@@ -19,9 +20,45 @@
 
 .listUser__title h1 {
   margin: 0;
-  margin-left: 30px;
+  margin-left: 20px;
   color: darkcyan;
   font-weight: 200;
   font-size: 32px;
   text-shadow: 1px 1px #222;
+}
+
+.listUser__list {
+  width: 1090px;
+  height: 596px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.listUser__listTitles {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #22222288;
+}
+
+.listUser__nameColumn {
+  color: #eee;
+  width: 20%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px; 
+}
+
+.space {
+  margin-left: 60px;
+}
+
+.listUser__user {
+  width: 1090px;
+  height: calc(596px - 40px);
+  background-color: #22222255;
+  overflow: auto;
 }

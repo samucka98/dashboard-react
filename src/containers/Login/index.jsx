@@ -3,14 +3,16 @@ import './styles.css';
 import api from '../../services/api';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import sectionAction from '../../Actions/sectionAction';
 
 const Login = () => {
-
+  const history = useHistory();
+  const dispatch = useDispatch();
+  
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
-  const [auth, setAuth] = useState({});
 
-  const history = useHistory();
 
   async function handlelogin(event) {
     event.preventDefault();
@@ -19,12 +21,14 @@ const Login = () => {
       await api.post('dashboard/access/login', {
         email,
         password: pass
-      }).then(response => {
-        setAuth(response.data);
+      })
+      
+      .then(response => {
+        localStorage.setItem('section-auth-token', response.data.token);
+        dispatch(sectionAction(response.data.auth));
         history.push('/dashboard/cad');
       });
 
-      console.log();
     } catch (error) {
       alert('Falha no login');
     }

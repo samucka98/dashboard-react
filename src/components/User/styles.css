@@ -1,0 +1,52 @@
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.user:hover {
+  background-color: #22222299;
+}
+
+.user__data {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #ccc;
+  width: 20%;
+}
+
+.user__data img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.space {
+  margin-left: 60px;
+}
+
+.user__data button {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  margin-left: 4px;
+  border-radius: 50%;
+}
+
+.user__data .edit-btn {
+  color: darkcyan;
+}
+
+.user__data .trash-btn {
+  color: red;
+}
+
+.user__data button:hover {
+  background-color: #55555599;
+}
