@@ -25,8 +25,8 @@ const Dashboard = () => {
         <div className="dashboard__content-main">
           <BrowserRouter>
             <Switch>
-              <Route exact path={`${match.path}/cad`} render={CadUser} />
-              <Route exact path={`${match.path}/list`} render={ListUser} />
+              <Route exact path={`${match.path}/cad`} component={CadUser} />
+              <Route exact path={`${match.path}/list`} component={ListUser} />
             </Switch>
           </BrowserRouter>
         </div>

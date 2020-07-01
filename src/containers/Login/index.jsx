@@ -25,7 +25,7 @@ const Login = () => {
       .then(response => {
         localStorage.setItem('section-auth-token', response.data.token);
         dispatch(sectionAction(response.data.auth));
-        history.push('/dashboard/cad');
+        history.push('/dashboard/list');
       });
 
     } catch (error) {

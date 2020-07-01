@@ -1,29 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import loadUsers from '../../Actions/loadUsers';
 import api from '../../services/api';
-import './styles.css';
-
 import User from '../User';
+import './styles.css';
 
 const ListUser = () => {
 
-  // async function handleLoadUsers() {
-  //   try {
-  //     await api.get('dashboard/admin/users', {
-  //       headers: {
-  //         'authorization-token': localStorage.getItem('dash-auth')
-  //       }
-  //     })
-  //     .then(response => {
-  //       console.log(response);
-  //     })
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+  const users = useSelector(state => state.users);
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   handleLoadUsers();
-  // }, [users]);
+  async function handleLoadUsers() {
+    await api.get('dashboard/admin/users', {
+      headers: {
+        'authorization-token': localStorage.getItem('section-auth-token')
+      }
+    })
+
+    .then(response => {
+      dispatch(loadUsers(response.data));
+    });
+  }
+
+  useEffect(() => {
+    handleLoadUsers();
+  })
 
   return (
     <div className="listUser">
@@ -55,7 +56,11 @@ const ListUser = () => {
         </div>
 
         <div className="listUser__user">
-          
+          {
+            users.map(user => 
+              <User key={user.id} user={user} />
+            )
+          }
         </div>
       </div>
     </div>

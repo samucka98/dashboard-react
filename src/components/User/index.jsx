@@ -2,20 +2,20 @@ import React from 'react';
 import { FiEdit as Edit, FiTrash2 as Trash } from 'react-icons/fi';
 import './styles.css';
 
-const User = () => {
+const User = ({ user }) => {
   
   return (
     <div className="user">
       <div className="user__data">
-        <img src="http://localhost:5000/uploads/admin.jpg" alt="avatar"/>
+        <img src={user.image_url} alt="avatar"/>
       </div>
 
       <div className="user__data">
-        Samuel Lima
+        { user.firstName + ' ' + user.lastName }
       </div>
 
       <div className="user__data">
-        samuelibiapinolima@gmail.com
+        { user.email }
       </div>
 
       <div className="user__data space">
